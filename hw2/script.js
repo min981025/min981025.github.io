@@ -2,6 +2,7 @@
 let canvas = document.getElementById("myCanvas");
 let ctx = canvas.getContext("2d");
 let x = 0, y = 0, dx = 10, dy = 10, r = 30, color = "#0095DD";
+let canMove = 0;
 
 // 畫圓形
 function drawBall()
@@ -27,7 +28,7 @@ function keyDownHandler(e)
 document.addEventListener("mousemove", mouseMoveHandler);
 function mouseMoveHandler(e)
 {
-if(canMove)
+	if(canMove)
 	{
 		x = e.clientX - canvas.offsetLeft;
 		y = e.clientY - canvas.offsetTop;
